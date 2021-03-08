@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./resources/css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ea3f9dc46a.js" crossorigin="anonymous"></script>
+    <title>Axis Architecture</title>
+</head>
+<body>
+
+    <!-- HEADER SECTION -->
+
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <div class="logo">
+                <span class="bold">axis</span><span class="light"> architecture</span>
+            </div>
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#work">work</a></li>
+                <li><a href="#team">team</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- BANNER SECTION -->
+
+    <div id="home" class="banner">
+    </div>
+
+    <!-- WORKS SECTION -->
+    
+    <div id="work">
+        <h2>selected works</h2>
+        <div class="work-container">
+            <div class="work-box" id="club-2100">
+                <div class="work-description">
+                    <h3>2100 Club</h3>
+                    <p>Hangzhou, China</p>
+                </div>
+            </div>
+            <div class="work-box" id="swiss-museum">
+                <div class="work-description">
+                    <h3>Swiss National Museum</h3>
+                    <p>Zürich, Switzerland</p>
+                </div>
+            </div>
+            <div class="work-box" id="square-tower">
+                <div class="work-description">
+                    <h3>Constitution Square</h3>
+                    <p>Ottawa, Canada</p>
+                </div>
+            </div>
+            <div class="work-box" id="le-stella">
+                <div class="work-description">
+                    <h3>Le Stella</h3>
+                    <p>Monte Carlo, Monaco</p>
+                </div>
+            </div>
+            <div class="work-box" id="la-tourette">
+                <div class="work-description">
+                    <h3>Sainte Marie De La Tourette</h3>
+                    <p>Éveux, France</p>
+                </div>
+            </div>
+            <div class="work-box" id="shanghai-baoye">
+                <div class="work-description">
+                    <h3>Shanghai Baoye Center</h3>
+                    <p>Shanghai, China</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TEAM SECTION -->
+    
+    <div id="team">
+        <h2>meet our team</h2>
+        <div class="team-container">
+            <div class="team-box" id="principal-architect">
+                <div class="team-description">
+                    <h3>Andrew Axis, AIA, LEED</h3>
+                    <p>Founder and Principal Architect</p>
+                </div>
+            </div>
+            <div class="team-box" id="project-architect">
+                <div class="team-description">
+                    <h3>Fujita Yamamoto, AIA</h3>
+                    <p>Project Architect</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    
+    <div id="contact">
+        <h2>contact us</h2>
+        <div class="contact-container">
+            <div class="contact-box"  id="white-background">
+                <div class="contact-form">
+                    <form action="#home">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name..">
+
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" placeholder="Your email..">
+
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="project">Project Inquiry</option>
+                            <option value="marketing-media">Marketing and Media Inquiry</option>
+                            <option value="general">General Inquiry</option>
+                        </select>
+                    
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your message.."></textarea>
+                    
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+            <div class="contact-box" id="interior-office">
+                <div class="contact-information">
+                    <h3>Axis Architecture</h3>
+                    <p>1169 Short St. Austin, Texas 78723</p>
+                    <p>512-919-4572</p>
+                    <p>info@axisarchitecture.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+
+    <footer>
+        <p>&copy;2021 Jackie Yu. Codecademy project. Photos from Unsplash. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,469 @@
+/* UNIVERSIAL STYLES */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* FONTS */
+
+h2 {
+    font-size: 27px;
+    letter-spacing: 1px;
+    margin-bottom: 9px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 22.5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* FONTS - MOBILE */
+
+@media only screen and (max-width: 500px) {
+    
+    h2 {
+        font-size: 18px;
+    }
+
+}
+
+/* HEADER */
+
+nav {
+    position: fixed;
+    background-color: rgba(65, 65, 65, 0.5);
+    width: 100%;
+    height: 81px;
+    z-index: 10;
+    text-transform: uppercase;
+}
+
+.checkbtn {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.logo {
+    display: inline-block;
+    font-family: 'Ubuntu', sans-serif;
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 81px;
+    padding-left: 24px;
+}
+
+.bold {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.light {
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 81px;
+    padding-right: 36px;
+}
+
+nav ul a {
+    color: #ffffff;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* HEADER - MOBILE */
+
+@media only screen and (max-width: 850px) {
+    
+    .checkbtn {
+        float: right;
+        display: block;
+        color: #ffffff;
+        font-size: 36px;
+        line-height: 81px;
+        padding-right: 36px;
+        cursor: pointer;
+    }
+
+    #check:checked ~ ul {
+        right: 0;
+    }
+      
+    nav ul {
+        position: fixed;
+        background-color: rgba(65, 65, 65, 0.5);
+        width: 100%;
+        height: 100%;
+        right: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        line-height: 36px;
+        margin: 64px 0;
+        padding: 0;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    
+    .logo,
+    .checkbtn {
+        font-size: 24px;
+    }
+
+    nav ul a {
+        font-size: 13.5px;
+    }
+
+}
+
+/* BANNER */
+
+.banner {
+    background-image: url("../images/the-broad.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+
+/* WORKS */
+
+#work {
+    padding-top: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#work h2 {
+    padding-left: 18px;
+}
+
+.work-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 9px;
+}
+
+.work-box {
+    display: flex;
+    border: 9px solid #ffffff;
+    width: 300px;
+    height: 400px;
+}
+
+.work-description {
+    display: flex;
+    background-color: rgba(65, 65, 65, 0.5);
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    transition: opacity .5s visibility .5s;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-box:hover .work-description {
+    visibility: visible;
+    cursor: pointer;
+}
+
+.work-description p {
+    font-size: 13.5px;
+}
+
+#club-2100 {
+    background-image: url("../images/2100-club.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+#swiss-museum {
+    background-image: url("../images/swiss-national-museum.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+#square-tower {
+    background-image: url("../images/constitution-square.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+#le-stella {
+    background-image: url("../images/le-stella.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+#la-tourette {
+    background-image: url("../images/sainte-marie-de-la-tourette.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+#shanghai-baoye {
+    background-image: url("../images/shanghai-baoye-center.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+/* WORK - MOBILE */
+
+@media only screen and (max-width: 500px) {
+    
+    .work-description h3 {
+        font-size: 18px;
+    }
+
+}
+
+/* TEAM */
+
+#team {
+    padding-top: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#team h2 {
+    padding-left: 18px;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 9px;
+}
+
+.team-box {
+    display: flex;
+    border: 9px solid #ffffff;
+    width: 300px;
+    height: 650px;
+    align-items: flex-end;
+}
+
+.team-description {
+    display: flex;
+    background-color: rgba(65, 65, 65, 0.5);
+    color: #ffffff;
+    width: 100%;
+    height: 15%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-description p {
+    font-size: 13.5px;
+}
+
+#principal-architect {
+    background-image: url("../images/principal-architect.jpg");
+    background-repeat: no-repeat;
+    background-position: center-top;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+#project-architect {
+    background-image: url("../images/project-architect.jpg");
+    background-repeat: no-repeat;
+    background-position: center-top;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+/* TEAM - MOBILE */
+
+@media only screen and (min-width: 635px) and (max-width: 900px) {
+    
+    #principal-architect,
+    #project-architect {
+        background-position: center;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    
+    .team-description h3 {
+        font-size: 18px;
+    }
+
+}
+
+/* CONTACT */
+
+#contact {
+    padding: 100px 0 100px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#contact h2 {
+    padding-left: 18px;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 9px;
+}
+
+.contact-box {
+    display: flex;
+    border: 9px solid #ffffff;
+    width: 300px;
+    height: 600px;
+    flex-direction: column;
+}
+
+.contact-information {
+    display: flex;
+    background-color: rgba(65, 65, 65, 0.5);
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-information h3,
+.contact-information p {
+    padding-bottom: 9px;
+}
+
+#white-background {
+    background-color: #ffffff;
+    flex-grow: 1;
+}
+
+#interior-office {
+    background-image: url("../images/interior-office.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+input[type=text], select, textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13.5px;
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #cccccc;
+    border-radius: 4.5px;
+    margin-top: 9px;
+    margin-bottom: 18px;
+    resize: vertical;
+}
+
+textarea {
+    height: 221px;
+}
+  
+input[type=submit] {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFA111;
+    color: white;
+    padding: 9px 18px;
+    border: none;
+    border-radius: 4.5px;
+    cursor: pointer;
+    font-size: 13.5px;
+}
+  
+input[type=submit]:hover {
+    background-color: #c47600;
+}
+
+.contact-information:hover {
+    display: none;
+    cursor: pointer;
+}
+
+/* CONTACT - MOBILE */
+
+@media only screen and (min-width: 635px) and (max-width: 900px) {
+    
+    #principal-architect,
+    #project-architect {
+        background-position: center;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    
+    .contact-information h3 {
+        font-size: 18px;
+    }
+    
+    .contact-information p,
+    label {
+        font-size: 13.5px;
+    }
+
+}
+
+/* FOOTER */
+
+footer {
+    background-color: rgba(65, 65, 65, 0.5);
+    color: #ffffff;
+    padding: 24px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 13.5px;
+}
