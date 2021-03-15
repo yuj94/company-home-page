@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./resources/css/style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/ea3f9dc46a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <title>Axis Architecture</title>
 </head>
 <body>
@@ -16,13 +16,18 @@
     <header>
         <nav>
             <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
+            <label for="check" class="check-button">
                 <i class="fas fa-bars"></i>
             </label>
             <div class="logo">
                 <span class="bold">axis</span><span class="light"> architecture</span>
             </div>
             <ul>
+                <li>
+                    <label for="check" class="close-button">
+                        <i class="fas fa-times"></i>
+                    </label>
+                </li>
                 <li><a href="#home">home</a></li>
                 <li><a href="#work">work</a></li>
                 <li><a href="#team">team</a></li>
@@ -105,14 +110,14 @@
     <div id="contact">
         <h2>contact us</h2>
         <div class="contact-container">
-            <div class="contact-box"  id="white-background">
+            <div class="contact-box" id="white-background">
                 <div class="contact-form">
                     <form action="#home">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your name..">
+                        <input type="text" id="name" name="name" placeholder="Enter your name">
 
                         <label for="email">Email</label>
-                        <input type="text" id="email" name="email" placeholder="Your email..">
+                        <input type="text" id="email" name="email" placeholder="Enter your email">
 
                         <label for="subject">Subject</label>
                         <select id="subject" name="subject">
@@ -123,7 +128,7 @@
                         </select>
                     
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Your message.."></textarea>
+                        <textarea id="message" name="message" placeholder="Enter your message"></textarea>
                     
                         <input type="submit" value="Submit">
                     </form>
@@ -143,7 +148,7 @@
     <!-- FOOTER SECTION -->
 
     <footer>
-        <p>&copy;2021 Jackie Yu. Codecademy project. Photos from Unsplash. All rights reserved.</p>
+        <p>&copy;2021 Jackie Yu. Project from Codecademy. Photos from Unsplash. Icons from Font Awesome. All rights reserved.</p>
     </footer>
 
 </body>

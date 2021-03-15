@@ -46,14 +46,14 @@ a {
 
 nav {
     position: fixed;
-    background-color: rgba(65, 65, 65, 0.5);
+    background-color: rgba(65, 65, 65, 0.7);
     width: 100%;
     height: 81px;
     z-index: 10;
     text-transform: uppercase;
 }
 
-.checkbtn {
+.check-button {
     display: none;
 }
 
@@ -94,16 +94,19 @@ nav ul a {
     color: #ffffff;
 }
 
-nav ul li:hover {
-    transform: scale(1.1);
+nav ul a:hover {
     cursor: pointer;
+}
+
+.close-button {
+    display: none;
 }
 
 /* HEADER - MOBILE */
 
 @media only screen and (max-width: 850px) {
     
-    .checkbtn {
+    .check-button {
         float: right;
         display: block;
         color: #ffffff;
@@ -116,10 +119,14 @@ nav ul li:hover {
     #check:checked ~ ul {
         right: 0;
     }
+
+    #check:checked ~ .check-button {
+        display: none;
+    }
       
     nav ul {
         position: fixed;
-        background-color: rgba(65, 65, 65, 0.5);
+        background-color: rgba(65, 65, 65, 0.7);
         width: 100%;
         height: 100%;
         right: -100%;
@@ -134,12 +141,22 @@ nav ul li:hover {
         padding: 0;
     }
 
+    .close-button {
+        display: block;
+        color: #ffffff;
+        position: absolute;
+        top: -81px;
+        right: 36px;
+        font-size: 36px;
+        line-height: 81px;
+    }
+
 }
 
 @media only screen and (max-width: 500px) {
     
     .logo,
-    .checkbtn {
+    .check-button {
         font-size: 24px;
     }
 
@@ -147,6 +164,9 @@ nav ul li:hover {
         font-size: 13.5px;
     }
 
+    .close-button {
+        font-size: 24px;
+    }
 }
 
 /* BANNER */
@@ -395,6 +415,10 @@ nav ul li:hover {
     flex-grow: 1;
 }
 
+.contact-information:hover {
+    display: none;
+}
+
 input[type=text], select, textarea {
     font-family: 'Open Sans', sans-serif;
     font-size: 13.5px;
@@ -413,9 +437,9 @@ textarea {
   
 input[type=submit] {
     font-family: 'Open Sans', sans-serif;
-    background-color: #FFA111;
-    color: white;
-    padding: 9px 18px;
+    background-color: #98c1d9;
+    color: #000000;
+    padding: 9px 27px;
     border: none;
     border-radius: 4.5px;
     cursor: pointer;
@@ -423,12 +447,8 @@ input[type=submit] {
 }
   
 input[type=submit]:hover {
-    background-color: #c47600;
-}
-
-.contact-information:hover {
-    display: none;
-    cursor: pointer;
+    background-color: #3d5a80;
+    color: #ffffff;
 }
 
 /* CONTACT - MOBILE */
@@ -458,7 +478,7 @@ input[type=submit]:hover {
 /* FOOTER */
 
 footer {
-    background-color: rgba(65, 65, 65, 0.5);
+    background-color: rgba(65, 65, 65, 0.7);
     color: #ffffff;
     padding: 24px;
     text-align: center;
