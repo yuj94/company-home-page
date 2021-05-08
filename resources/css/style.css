@@ -1,4 +1,4 @@
-/* UNIVERSIAL STYLES */
+/* UNIVERSAL STYLES */
 
 * {
     padding: 0;
@@ -9,13 +9,17 @@
 
 html,
 body {
-    height: 100%;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     font-weight: 400;
 }
 
 /* FONTS */
+
+h1 {
+    font-size: 31.5px;
+    margin-bottom: 9px;
+}
 
 h2 {
     font-size: 27px;
@@ -28,14 +32,22 @@ h3 {
     font-size: 22.5px;
 }
 
+p {
+    font-size: 13.5px;
+}
+
 a {
     text-decoration: none;
 }
 
 /* FONTS - MOBILE */
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
     
+    h1 {
+        font-size: 22.5px;
+    }
+
     h2 {
         font-size: 18px;
     }
@@ -44,30 +56,22 @@ a {
 
 /* HEADER */
 
-nav {
+header {
     position: fixed;
-    background-color: rgba(65, 65, 65, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
-    height: 81px;
-    z-index: 10;
+    height: 90px;
     text-transform: uppercase;
-}
-
-.check-button {
-    display: none;
-}
-
-#check {
-    display: none;
+    z-index: 10;
 }
 
 .logo {
     display: inline-block;
     font-family: 'Ubuntu', sans-serif;
-    color: #ffffff;
+    color: #fff;
     font-size: 36px;
-    line-height: 81px;
-    padding-left: 24px;
+    line-height: 90px;
+    padding-left: 27px;
 }
 
 .bold {
@@ -80,108 +84,225 @@ nav {
     letter-spacing: 1px;
 }
 
-nav ul {
+.navigation ul {
     float: right;
 }
 
-nav ul li {
+.navigation ul li {
     display: inline-block;
-    line-height: 81px;
-    padding-right: 36px;
+    line-height: 90px;
+    padding-right: 27px;
 }
 
-nav ul a {
-    color: #ffffff;
+.navigation ul a {
+    color: #fff;
 }
 
-nav ul a:hover {
+.navigation ul a:hover {
     cursor: pointer;
 }
 
+.menu-button,
 .close-button {
     display: none;
 }
 
 /* HEADER - MOBILE */
 
-@media only screen and (max-width: 850px) {
-    
-    .check-button {
-        float: right;
-        display: block;
-        color: #ffffff;
-        font-size: 36px;
-        line-height: 81px;
-        padding-right: 36px;
-        cursor: pointer;
+@media only screen and (max-width: 1080px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    #check:checked ~ ul {
-        right: 0;
-    }
-
-    #check:checked ~ .check-button {
-        display: none;
-    }
-      
-    nav ul {
+    .navigation ul {
         position: fixed;
-        background-color: rgba(65, 65, 65, 0.7);
+        background-color: #222;
         width: 100%;
         height: 100%;
-        right: -100%;
-        text-align: center;
-        transition: all .5s;
+        top: -100%;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 20;
+        transition: 1s;
     }
 
-    nav ul li {
-        display: block;
-        line-height: 36px;
-        margin: 64px 0;
+    .navigation ul.active {
+        top: 0;
+    }
+
+    .navigation ul li {
+        line-height: 72px;
         padding: 0;
     }
 
-    .close-button {
+    .menu-button {
         display: block;
-        color: #ffffff;
+        color: #fff;
+        padding-right: 27px;
+    }
+
+    .menu-button.active {
+        display: none;
+    }
+
+    .close-button.active {
+        display: block;
+        color: #fff;
         position: absolute;
-        top: -81px;
-        right: 36px;
-        font-size: 36px;
-        line-height: 81px;
+        top: 27px;
+        right: 27px;
+        z-index: 20;
     }
 
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
     
-    .logo,
-    .check-button {
-        font-size: 24px;
+    .logo {
+        font-size: 27px;
     }
 
-    nav ul a {
+    .menu-button,
+    .close-button {
         font-size: 13.5px;
     }
 
-    .close-button {
-        font-size: 24px;
-    }
 }
 
 /* BANNER */
 
 .banner {
-    background-image: url("../images/the-broad.jpg");
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.banner-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.banner-box.current {
+    opacity: 1;
+}
+
+.banner-box .banner-description {
+    position: absolute;
+    bottom: 72px;
+    left: -450px;
+    width: 450px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 27px;
+    opacity: 0;
+}
+
+.banner-box.current .banner-description {
+    opacity: 1;
+    transform: translateX(450px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+
+.banner-box .banner-description p {
+    font-size: 18px;
+}
+
+.banner-box:first-child {
+    background-image: url('../images/the-broad.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100%;
+}
+
+.banner-box:nth-child(2) {
+    background-image: url('../images/oslo-opera-house.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner-box:nth-child(3) {
+    background-image: url('../images/maat-museum.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner-box:nth-child(4) {
+    background-image: url('../images/the-oculus.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner-box:nth-child(5) {
+    background-image: url('../images/rock-and-roll.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.arrows button {
+    border: none;
+    background-color: transparent;
+    color: #222;
+    cursor: pointer;
+    outline: none;
+}
+
+.arrows button:hover {
+    color: #fff;
+}
+
+.arrows button#next {
+    position: absolute;
+    top: 50%;
+    right: 27px;
+    transform: translateY(-50%);
+}
+
+.arrows button#prev {
+    position: absolute;
+    top: 50%;
+    left: 27px;
+    transform: translateY(-50%);
+}
+
+/* BANNER - MOBILE */
+
+@media only screen and (max-width: 768px) {
+
+    .banner-box .banner-description {
+        bottom: -300px;
+        left: 0;
+        width: 100%;
+        padding: 22.5px;
+    }
+
+    .banner-box.current .banner-description {
+        transform: translateY(-300px);
+    }
+
+    .banner-box .banner-description p {
+        font-size: 13.5px;
+    }
+
 }
 
 /* WORKS */
 
-#work {
+/* #work {
     padding-top: 100px;
     max-width: 1200px;
     margin: 0 auto;
@@ -199,7 +320,7 @@ nav ul a:hover {
 
 .work-box {
     display: flex;
-    border: 9px solid #ffffff;
+    border: 9px solid #fff;
     width: 300px;
     height: 400px;
 }
@@ -207,18 +328,19 @@ nav ul a:hover {
 .work-description {
     display: flex;
     background-color: rgba(65, 65, 65, 0.5);
-    color: #ffffff;
+    color: #fff;
     width: 100%;
     height: 100%;
-    visibility: hidden;
+    opacity: 0;
     transition: opacity .5s visibility .5s;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: 1s ease;
 }
 
 .work-box:hover .work-description {
-    visibility: visible;
+    opacity: 1;
     cursor: pointer;
 }
 
@@ -272,21 +394,26 @@ nav ul a:hover {
     background-position: center;
     background-size: cover;
     flex-grow: 1;
-}
+} */
 
 /* WORK - MOBILE */
 
-@media only screen and (max-width: 500px) {
+/* @media only screen and (max-width: 500px) {
     
     .work-description h3 {
         font-size: 18px;
     }
 
-}
+    .work-description {
+        background-color: rgba(65, 65, 65, 0.4);
+        opacity: 1;
+    }
+
+} */
 
 /* TEAM */
 
-#team {
+/* #team {
     padding-top: 100px;
     max-width: 1200px;
     margin: 0 auto;
@@ -304,7 +431,7 @@ nav ul a:hover {
 
 .team-box {
     display: flex;
-    border: 9px solid #ffffff;
+    border: 9px solid #fff;
     width: 300px;
     height: 650px;
     align-items: flex-end;
@@ -313,7 +440,7 @@ nav ul a:hover {
 .team-description {
     display: flex;
     background-color: rgba(65, 65, 65, 0.5);
-    color: #ffffff;
+    color: #fff;
     width: 100%;
     height: 15%;
     flex-direction: column;
@@ -334,16 +461,16 @@ nav ul a:hover {
 }
 
 #project-architect {
-    background-image: url("../images/project-architect.jpg");
+    background-image: url("../images/rene-ranisch-f5nYyu7rmkI-unsplash.jpg");
     background-repeat: no-repeat;
     background-position: center-top;
     background-size: cover;
     flex-grow: 1;
-}
+} */
 
 /* TEAM - MOBILE */
 
-@media only screen and (min-width: 635px) and (max-width: 900px) {
+/* @media only screen and (min-width: 635px) and (max-width: 900px) {
     
     #principal-architect,
     #project-architect {
@@ -358,11 +485,11 @@ nav ul a:hover {
         font-size: 18px;
     }
 
-}
+} */
 
 /* CONTACT */
 
-#contact {
+/* #contact {
     padding: 100px 0 100px 0;
     max-width: 1200px;
     margin: 0 auto;
@@ -380,7 +507,7 @@ nav ul a:hover {
 
 .contact-box {
     display: flex;
-    border: 9px solid #ffffff;
+    border: 9px solid #fff;
     width: 300px;
     height: 600px;
     flex-direction: column;
@@ -389,12 +516,14 @@ nav ul a:hover {
 .contact-information {
     display: flex;
     background-color: rgba(65, 65, 65, 0.5);
-    color: #ffffff;
+    color: #fff;
     width: 100%;
     height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    transition: .5s ease;
 }
 
 .contact-information h3,
@@ -403,7 +532,7 @@ nav ul a:hover {
 }
 
 #white-background {
-    background-color: #ffffff;
+    background-color: #fff;
     flex-grow: 1;
 }
 
@@ -416,7 +545,7 @@ nav ul a:hover {
 }
 
 .contact-information:hover {
-    display: none;
+    opacity: 0;
 }
 
 input[type=text], select, textarea {
@@ -424,7 +553,7 @@ input[type=text], select, textarea {
     font-size: 13.5px;
     width: 100%;
     padding: 9px;
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
     border-radius: 4.5px;
     margin-top: 9px;
     margin-bottom: 18px;
@@ -438,22 +567,23 @@ textarea {
 input[type=submit] {
     font-family: 'Open Sans', sans-serif;
     background-color: #98c1d9;
-    color: #000000;
+    color: #000;
     padding: 9px 27px;
     border: none;
     border-radius: 4.5px;
     cursor: pointer;
     font-size: 13.5px;
+    transition: 0.75s ease;
 }
   
 input[type=submit]:hover {
     background-color: #3d5a80;
-    color: #ffffff;
-}
+    color: #fff;
+} */
 
 /* CONTACT - MOBILE */
 
-@media only screen and (min-width: 635px) and (max-width: 900px) {
+/* @media only screen and (min-width: 635px) and (max-width: 900px) {
     
     #principal-architect,
     #project-architect {
@@ -473,17 +603,17 @@ input[type=submit]:hover {
         font-size: 13.5px;
     }
 
-}
+} */
 
 /* FOOTER */
 
-footer {
+/* footer {
     background-color: rgba(65, 65, 65, 0.7);
-    color: #ffffff;
+    color: #fff;
     padding: 24px;
     text-align: center;
 }
 
 footer p {
     font-size: 13.5px;
-}
+} */
