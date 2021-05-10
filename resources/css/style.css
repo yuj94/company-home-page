@@ -320,8 +320,8 @@ header {
 /* TEAM */
 
 .team-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     padding: 0 9px;
 }
 
@@ -329,50 +329,64 @@ header {
     display: flex;
     align-items: flex-end;
     border: 9px solid #fff;
-    width: 306px;
-    height: 594px;
+    height: 504px;
+    text-align: center;
 }
 
 .team-description {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    width: 100%;
-    height: 15%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    width: 100%;
+    padding: 18px 9px;
 }
 
 #principal-architect {
     background-image: url("../images/principal-architect.jpg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center top;
     background-size: cover;
-    flex-grow: 1;
 }
 
 #project-architect {
-    background-image: url("../images/project-architect-web.jpg");
+    background-image: url("../images/project-architect.jpg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center top;
     background-size: cover;
-    flex-grow: 1;
+}
+
+#interior-designer {
+    background-image: url("../images/interior-designer.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
 }
 
 #architectural-designer {
     background-image: url("../images/architectural-designer.jpg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center top;
     background-size: cover;
-    flex-grow: 1;
 }
 
 /* TEAM - MOBILE */
 
-@media only screen and (min-width: 400px) and (max-width: 900px) {
+@media only screen and (max-width: 1080px) {
 
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
+}
+
+@media only screen and (max-width: 540px) {
+
+    .team-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 
 }
 
