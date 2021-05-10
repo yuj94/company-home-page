@@ -14,6 +14,12 @@ body {
     font-weight: 400;
 }
 
+section {
+    padding-top: 126px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 /* FONTS */
 
 h1 {
@@ -24,7 +30,8 @@ h1 {
 h2 {
     font-size: 27px;
     letter-spacing: 1px;
-    margin-bottom: 9px;
+    margin-bottom: 27px;
+    margin-left: 18px;
     text-transform: uppercase;
 }
 
@@ -33,7 +40,7 @@ h3 {
 }
 
 p {
-    font-size: 13.5px;
+    font-size: 18px;
 }
 
 a {
@@ -129,7 +136,7 @@ header {
         align-items: center;
         flex-direction: column;
         z-index: 20;
-        transition: 1s;
+        transition: .75s;
     }
 
     .navigation ul.active {
@@ -171,6 +178,14 @@ header {
     .menu-button,
     .close-button {
         font-size: 13.5px;
+    }
+
+}
+
+@media only screen and (max-width: 375px) {
+    
+    .light {
+        display: none;
     }
 
 }
@@ -294,24 +309,75 @@ header {
         transform: translateY(-300px);
     }
 
-    .banner-box .banner-description p {
-        font-size: 13.5px;
-    }
+}
+
+/* ABOUT */
+
+.about-container {
+    padding: 9px 18px;
+}
+
+/* TEAM */
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 9px;
+}
+
+.team-box {
+    display: flex;
+    align-items: flex-end;
+    border: 9px solid #fff;
+    width: 306px;
+    height: 594px;
+}
+
+.team-description {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    width: 100%;
+    height: 15%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#principal-architect {
+    background-image: url("../images/principal-architect.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+#project-architect {
+    background-image: url("../images/project-architect-web.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+#architectural-designer {
+    background-image: url("../images/architectural-designer.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+/* TEAM - MOBILE */
+
+@media only screen and (min-width: 400px) and (max-width: 900px) {
+
+
 
 }
 
 /* WORKS */
-
-/* #work {
-    padding-top: 100px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-#work h2 {
-    padding-left: 18px;
-}
-
+ /*
 .work-container {
     display: flex;
     flex-wrap: wrap;
@@ -411,92 +477,12 @@ header {
 
 } */
 
-/* TEAM */
-
-/* #team {
-    padding-top: 100px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-#team h2 {
-    padding-left: 18px;
-}
-
-.team-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 9px;
-}
-
-.team-box {
-    display: flex;
-    border: 9px solid #fff;
-    width: 300px;
-    height: 650px;
-    align-items: flex-end;
-}
-
-.team-description {
-    display: flex;
-    background-color: rgba(65, 65, 65, 0.5);
-    color: #fff;
-    width: 100%;
-    height: 15%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.team-description p {
-    font-size: 13.5px;
-}
-
-#principal-architect {
-    background-image: url("../images/principal-architect.jpg");
-    background-repeat: no-repeat;
-    background-position: center-top;
-    background-size: cover;
-    flex-grow: 1;
-}
-
-#project-architect {
-    background-image: url("../images/rene-ranisch-f5nYyu7rmkI-unsplash.jpg");
-    background-repeat: no-repeat;
-    background-position: center-top;
-    background-size: cover;
-    flex-grow: 1;
-} */
-
-/* TEAM - MOBILE */
-
-/* @media only screen and (min-width: 635px) and (max-width: 900px) {
-    
-    #principal-architect,
-    #project-architect {
-        background-position: center;
-    }
-
-}
-
-@media only screen and (max-width: 500px) {
-    
-    .team-description h3 {
-        font-size: 18px;
-    }
-
-} */
-
 /* CONTACT */
 
 /* #contact {
     padding: 100px 0 100px 0;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-#contact h2 {
-    padding-left: 18px;
 }
 
 .contact-container {
