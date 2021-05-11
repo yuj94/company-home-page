@@ -1,5 +1,10 @@
 /* UNIVERSAL STYLES */
 
+:root {
+    --primary-background-color: rgba(0, 0, 0, 0.8);
+    --primary-text-color: #fff;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -65,7 +70,7 @@ a {
 
 header {
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--primary-background-color);
     width: 100%;
     height: 90px;
     text-transform: uppercase;
@@ -75,7 +80,7 @@ header {
 .logo {
     display: inline-block;
     font-family: 'Ubuntu', sans-serif;
-    color: #fff;
+    color: var(--primary-text-color);
     font-size: 36px;
     line-height: 90px;
     padding-left: 27px;
@@ -102,7 +107,7 @@ header {
 }
 
 .navigation ul a {
-    color: #fff;
+    color: var(--primary-text-color);
 }
 
 .navigation ul a:hover {
@@ -150,7 +155,7 @@ header {
 
     .menu-button {
         display: block;
-        color: #fff;
+        color: var(--primary-text-color);
         padding-right: 27px;
     }
 
@@ -160,7 +165,7 @@ header {
 
     .close-button.active {
         display: block;
-        color: #fff;
+        color: var(--primary-text-color);
         position: absolute;
         top: 27px;
         right: 27px;
@@ -217,8 +222,8 @@ header {
     bottom: 72px;
     left: -450px;
     width: 450px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
     padding: 27px;
     opacity: 0;
 }
@@ -278,7 +283,7 @@ header {
 }
 
 .arrows button:hover {
-    color: #fff;
+    color: var(--primary-text-color);
 }
 
 .arrows button#next {
@@ -343,8 +348,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
     width: 100%;
     padding: 18px 9px;
 }
@@ -417,8 +422,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
     width: 100%;
     height: 100%;
     opacity: 0;
@@ -486,7 +491,7 @@ header {
 /* CONTACT */
 
 .contact {
-    padding-bottom: 90px;
+    padding-bottom: 126px;
 }
 
 .contact-container {
@@ -509,8 +514,8 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
     width: 100%;
     height: 100%;
     opacity: 1;
@@ -585,8 +590,8 @@ input[type=submit]:hover {
 /* FOOTER */
 
 footer {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
+    background-color: #222;
+    color: var(--primary-text-color);
     padding: 24px;
     text-align: center;
 }
