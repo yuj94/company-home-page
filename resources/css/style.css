@@ -136,7 +136,7 @@ header {
         justify-content: center;
         align-items: center;
         z-index: 20;
-        transition: .75s;
+        transition: all .75s;
     }
 
     .navigation ul.active {
@@ -182,7 +182,7 @@ header {
 
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 375px) {
     
     .light {
         display: none;
@@ -205,7 +205,7 @@ header {
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: opacity 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .banner-box.current {
@@ -272,6 +272,7 @@ header {
     border: none;
     background-color: transparent;
     color: #222;
+    z-index: 5;
     cursor: pointer;
     outline: none;
 }
@@ -315,6 +316,10 @@ header {
 
 .about-container {
     padding: 9px 18px;
+}
+
+.about-container p {
+    line-height: 27px;
 }
 
 /* TEAM */
@@ -417,7 +422,7 @@ header {
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: 1s ease-in-out;
+    transition: all .75s ease-in-out;
 }
 
 .work-box:hover .work-description {
@@ -472,6 +477,7 @@ header {
 @media only screen and (max-width: 540px) {
 
     .work-description {
+        background-color: rgba(0, 0, 0, 0.6);
         opacity: 1;
     }
 
@@ -479,10 +485,8 @@ header {
 
 /* CONTACT */
 
-/* #contact {
-    padding: 100px 0 100px 0;
-    max-width: 1200px;
-    margin: 0 auto;
+.contact {
+    padding-bottom: 90px;
 }
 
 .contact-container {
@@ -494,22 +498,23 @@ header {
 .contact-box {
     display: flex;
     border: 9px solid #fff;
-    width: 300px;
-    height: 600px;
-    flex-direction: column;
+    width: 360px;
+    height: 648px;
+    flex-grow: 1;
 }
 
 .contact-information {
     display: flex;
-    background-color: rgba(65, 65, 65, 0.5);
-    color: #fff;
-    width: 100%;
-    height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: all .5s ease;
 }
 
 .contact-information h3,
@@ -517,24 +522,20 @@ header {
     padding-bottom: 9px;
 }
 
-#white-background {
-    background-color: #fff;
-    flex-grow: 1;
-}
-
 #interior-office {
     background-image: url("../images/interior-office.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    flex-grow: 1;
 }
 
 .contact-information:hover {
     opacity: 0;
 }
 
-input[type=text], select, textarea {
+input[type=text],
+select,
+textarea {
     font-family: 'Open Sans', sans-serif;
     font-size: 13.5px;
     width: 100%;
@@ -547,7 +548,7 @@ input[type=text], select, textarea {
 }
 
 textarea {
-    height: 221px;
+    height: 269px;
 }
   
 input[type=submit] {
@@ -559,42 +560,32 @@ input[type=submit] {
     border-radius: 4.5px;
     cursor: pointer;
     font-size: 13.5px;
-    transition: 0.75s ease;
+    transition: all 0.75s ease;
 }
   
 input[type=submit]:hover {
     background-color: #3d5a80;
     color: #fff;
-} */
+}
 
 /* CONTACT - MOBILE */
 
-/* @media only screen and (min-width: 635px) and (max-width: 900px) {
+@media only screen and (max-width: 768px) {
     
-    #principal-architect,
-    #project-architect {
-        background-position: center;
+    .contact-box {
+        height: 540px;;
     }
 
+    textarea {
+        height: 161px;
+    }
+      
 }
-
-@media only screen and (max-width: 500px) {
-    
-    .contact-information h3 {
-        font-size: 18px;
-    }
-    
-    .contact-information p,
-    label {
-        font-size: 13.5px;
-    }
-
-} */
 
 /* FOOTER */
 
-/* footer {
-    background-color: rgba(65, 65, 65, 0.7);
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     padding: 24px;
     text-align: center;
@@ -602,4 +593,4 @@ input[type=submit]:hover {
 
 footer p {
     font-size: 13.5px;
-} */
+}
