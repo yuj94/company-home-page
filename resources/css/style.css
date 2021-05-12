@@ -134,7 +134,7 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        z-index: 20;
+        z-index: 15;
         transition: all .75s;
     }
 
@@ -151,6 +151,8 @@ header {
         display: block;
         color: var(--primary-text-color);
         padding-right: 27px;
+        z-index: 20;
+        cursor: pointer;
     }
 
     .menu-button.active {
@@ -163,7 +165,8 @@ header {
         position: absolute;
         top: 27px;
         right: 27px;
-        z-index: 20;
+        z-index: 25;
+        cursor: pointer;
     }
 
 }
