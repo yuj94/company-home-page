@@ -50,7 +50,9 @@ p {
 }
 
 a {
+    color: var(--primary-text-color);
     text-decoration: none;
+    cursor: pointer;
 }
 
 /* FONTS - MOBILE */
@@ -81,7 +83,6 @@ header {
 .logo {
     display: inline-block;
     font-family: 'Ubuntu', sans-serif;
-    color: var(--primary-text-color);
     font-size: 36px;
     line-height: 90px;
     padding-left: 27px;
@@ -105,14 +106,6 @@ header {
     display: inline-block;
     line-height: 90px;
     padding-right: 27px;
-}
-
-.navigation ul a {
-    color: var(--primary-text-color);
-}
-
-.navigation ul a:hover {
-    cursor: pointer;
 }
 
 .menu-button,
@@ -593,7 +586,7 @@ input[type=submit]:hover {
 footer {
     background-color: #222;
     color: var(--primary-text-color);
-    padding: 24px;
+    padding: 27px;
     text-align: center;
 }
 
