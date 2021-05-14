@@ -236,35 +236,35 @@ header {
 }
 
 .banner-box:first-child {
-    background-image: url('../images/the-broad.jpg');
+    background-image: url('../images/the-broad-web.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .banner-box:nth-child(2) {
-    background-image: url('../images/oslo-opera-house.jpg');
+    background-image: url('../images/oslo-opera-house-web.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .banner-box:nth-child(3) {
-    background-image: url('../images/maat-museum.jpg');
+    background-image: url('../images/maat-museum-web.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .banner-box:nth-child(4) {
-    background-image: url('../images/the-oculus.jpg');
+    background-image: url('../images/the-oculus-web.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .banner-box:nth-child(5) {
-    background-image: url('../images/rock-and-roll.jpg');
+    background-image: url('../images/rock-and-roll-web.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -352,28 +352,28 @@ header {
 }
 
 #principal-architect {
-    background-image: url("../images/principal-architect.jpg");
+    background-image: url("../images/principal-architect-web.jpg");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
 }
 
 #project-architect {
-    background-image: url("../images/project-architect.jpg");
+    background-image: url("../images/project-architect-web.jpg");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
 }
 
 #interior-designer {
-    background-image: url("../images/interior-designer.jpg");
+    background-image: url("../images/interior-designer-web.jpg");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
 }
 
 #architectural-designer {
-    background-image: url("../images/architectural-designer.jpg");
+    background-image: url("../images/architectural-designer-web.jpg");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -433,48 +433,48 @@ header {
 }
 
 #club-2100 {
-    background-image: url("../images/2100-club.jpg");
+    background-image: url("../images/2100-club-web.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 #swiss-museum {
-    background-image: url("../images/swiss-national-museum.jpg");
+    background-image: url("../images/swiss-national-museum-web.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 #square-tower {
-    background-image: url("../images/constitution-square.jpg");
+    background-image: url("../images/constitution-square-web.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 #le-stella {
-    background-image: url("../images/le-stella.jpg");
+    background-image: url("../images/le-stella-web.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 #la-tourette {
-    background-image: url("../images/sainte-marie-de-la-tourette.jpg");
+    background-image: url("../images/sainte-marie-de-la-tourette-web.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 #shanghai-baoye {
-    background-image: url("../images/shanghai-baoye-center.jpg");
+    background-image: url("../images/shanghai-baoye-center-web.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-/* WORK - MOBILE */
+/* WORKS - MOBILE */
 
 @media only screen and (max-width: 540px) {
 
@@ -525,7 +525,7 @@ header {
 }
 
 #interior-office {
-    background-image: url("../images/interior-office.jpg");
+    background-image: url("../images/interior-office-web.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

@@ -1,3 +1,4 @@
+// BANNER CAROUSEL VARIABLES
 const slides = document.querySelectorAll('.banner-box');
 const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');
@@ -5,7 +6,7 @@ const auto = true;
 const intervalTime = 5000;
 let slideInterval;
 
-// BANNER CAROUSEL
+// BANNER CAROUSEL FUNCTIONS
 const nextSlide = () => {
     const current = document.querySelector('.current');
     current.classList.remove('current');
@@ -28,7 +29,7 @@ const prevSlide = () => {
     setTimeout(() => current.classList.remove('current'));
 };
 
-// ARROW BUTTONS
+// ARROW BUTTON FUNCTIONS
 next.addEventListener('click', e => {
     nextSlide();
     if (auto) {
@@ -45,18 +46,18 @@ prev.addEventListener('click', e => {
     }
 });
 
-// AUTOSLIDE
+// AUTOSLIDE FUNCTION
 if (auto) {
     slideInterval = setInterval(nextSlide, intervalTime);
 }
 
+// MENU BUTTON VARIABLES
 const menuBtn = document.querySelector(".menu-button");
 const closeBtn = document.querySelector(".close-button");
 const navigation = document.querySelector(".navigation ul");
 const navigationItems = document.querySelectorAll(".navigation ul li a");
 
-// MENU BUTTON EVENTS
-
+// MENU BUTTON FUNCTIONS
 menuBtn.addEventListener("click", () => {
     menuBtn.classList.toggle("active");
     closeBtn.classList.toggle("active");
